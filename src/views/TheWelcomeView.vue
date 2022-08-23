@@ -7,7 +7,7 @@
     <div class="welcome">
         <h1>歡迎</h1>
         <div class="commercial-img">
-            <img src="@/assets/photo/Dayflow - Buy Online (1).png" alt="">
+            <img src="@/assets/photo/Dayflow-BuyOnline(1).png" alt="">
         </div>
     </div>
 

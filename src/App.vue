@@ -8,8 +8,6 @@ import HomeView from './views/HomeView.vue'
 
   <router-view/>
 
-
-
 </template>
 
 <style scoped>
