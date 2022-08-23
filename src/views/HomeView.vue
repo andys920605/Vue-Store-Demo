@@ -1,18 +1,36 @@
 <script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
+import HelloWorld from '@/components/HelloWorld.vue'
+import HeaderComp from '@/components/HeaderComp.vue'
 </script>
 
 <template>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <HeaderComp />
+  <main>
+    <nav>
+        <div class="navbar">
+            <div class="navbar-item navbar-store">
+                <div class="icon"><i class="fa-solid fa-shop"></i></div>
+                <div class="text">商店</div>
+            </div>
+            <div class="navbar-item navbar-message">
+                <div class="icon"><i class="fa-solid fa-comment-dots"></i></div>
+                <div class="text">訊息</div>
+            </div>
+            <div class="navbar-item navbar-inform">
+                <div class="icon"><i class="fa-solid fa-bell"></i></div>
+                <div class="text">通知</div>
+            </div>
+            <div class="navbar-item navbar-my">
+                <div class="icon"><i class="fa-solid fa-user"></i></div>
+                <div class="text">我的</div>
+            </div>
+        </div>
+    </nav>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/login">Login</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-
-  <RouterView />
+    <div class="bangs"></div>
+  </main>
 </template>
+
+<style>
+
+</style>
