@@ -1,3 +1,7 @@
+# UIUX designer
+
+UIUX design by je, checkout [here](https://github.com/roll311/E-commerce) 
+
 # Vue-Store-Demo
 
 This template should help get you started developing with Vue 3 in Vite.
