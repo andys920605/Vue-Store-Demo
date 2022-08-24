@@ -6,19 +6,19 @@
     </div>
 
     <div class="sing-up-process">
-        <div class="sing-up-process-step sing-up-process-choose-step1">
+        <div class="sing-up-process-step" v-bind:class="step1_color">
             <div class="number" v-bind:value="page">1</div>
             <div class="text">選擇</div>
         </div>
-        <div class="sing-up-process-step sing-up-process-choose-step2">
+        <div class="sing-up-process-step" v-bind:class="step2_color">
             <div class="number">2</div>
             <div class="text">手機驗證</div>
         </div>
-        <div class="sing-up-process-step sing-up-process-choose-step3">
+        <div class="sing-up-process-step" v-bind:class="step3_color">
             <div class="number">3</div>
             <div class="text">基本訊息</div>
         </div>
-        <div class="sing-up-process-step sing-up-process-choose-step4 sing-up-process-step4">
+        <div class="sing-up-process-step sing-up-process-step4" v-bind:class="step4_color">
             <div class="number">4</div>
             <div class="text">完成</div>
         </div>
@@ -223,25 +223,33 @@ export default {
   data () {
     return {
       page:1,
-
+      step1_color:"color-black",
+      step2_color:"color-white",
+      step3_color:"color-white",
+      step4_color:"color-white",
     }
   },
   methods: {
     p1to2(event){
       //console.log(event)
       this.page = 2;
+      this.step2_color = "color-black";
     },
     p2to1(event){
       this.page = 1;
+      this.step2_color = "color-white";
     },
     p2to3(event){
       this.page = 3;
+      this.step3_color = "color-black";
     },
     p3to2(event){
       this.page = 2;
+      this.step3_color = "color-white";
     },
     p3to4(event){
       this.page = 4;
+      this.step4_color = "color-black";
     }
   }
 }
@@ -249,5 +257,17 @@ export default {
 
 
 <style>
+.color-black .number{
+  background: #000;
+}
+.color-black .text{
+  color: #000;
+}
+.color-white .number{
+  background: #CDCDCD;
+}
+.color-white .text{
+  color: #CDCDCD;
+}
 
 </style>
