@@ -2,6 +2,7 @@
 </script>
 
 <template>
+  <h1>hello</h1>
   <div class="block" v-for="num in count">
     <h1>Hi here is test1 page &&{{num}}</h1>
   </div>
