@@ -1,11 +1,23 @@
 <script setup>
 import HelloWorld from '@/components/HelloWorld.vue'
 import HeaderComp from '@/components/HeaderComp.vue'
+import test1 from '@/components/test1.vue'
+import test2 from '@/components/test2.vue'
 </script>
 
 <template>
     <HeaderComp />
-  <main>
+    <main>
+        <button
+        v-for="tab in tabs"
+        :key="tab"
+        :class="['tab-button', { active: currentTab === tab }]"
+        @click="currentTab = tab">
+        {{ tab }}
+        </button>
+
+    <component :is="currentTabComponent"></component>
+
     <nav>
         <div class="navbar">
             <div class="navbar-item navbar-store">
@@ -28,8 +40,35 @@ import HeaderComp from '@/components/HeaderComp.vue'
     </nav>
 
     <div class="bangs"></div>
-  </main>
+    </main>
 </template>
+
+<script>
+export default {
+    data () {
+        return {
+        currentTab: 'HelloWorld',
+        tabs: ['HelloWorld', 'test1', 'test2'],
+        message:'',
+        }
+    },
+    computed: {
+        currentTabComponent() {
+        //console.log(this.currentTab.toLowerCase());
+        return this.currentTab.toLowerCase();
+        },
+    },
+    components:{
+        'helloworld':HelloWorld,
+        'test1':test1,
+        'test2':test2,
+    }
+  
+}
+</script>
+
+
+
 
 <style>
 
