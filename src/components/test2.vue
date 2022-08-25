@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <h1>Hi here is  2</h1>
+    <h1>Hi here is 2</h1>
 </template>
 
 <script>
