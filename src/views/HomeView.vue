@@ -3,6 +3,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import HeaderComp from '@/components/HeaderComp.vue'
 import test1 from '@/components/test1.vue'
 import test2 from '@/components/test2.vue'
+
+
 </script>
 
 <template>
@@ -63,7 +65,6 @@ export default {
         'test1':test1,
         'test2':test2,
     }
-  
 }
 </script>
 

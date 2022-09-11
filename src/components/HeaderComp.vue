@@ -10,6 +10,7 @@
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/the-welcome">Login</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/true-home">True home</RouterLink>
     </div>
   </div>
 </template>
