@@ -70,6 +70,9 @@
         -webkit-filter:grayscale(1);
     }
     .product-name{
+        overflow: hidden;
+        /* text-overflow: ellipsis; */
+        white-space: nowrap;
         margin: 2px 0;
         font-size: 16px;
         width: 160px;
