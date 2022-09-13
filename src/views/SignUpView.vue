@@ -71,7 +71,7 @@
       <div class="back-next-box">
           <RouterLink to="/the-welcome" class="back-btn">返回</RouterLink>
           <div class="next-step-box">
-              <button class="next-step" @click="p1to2">
+              <button class="next-step" @click="next_page">
                   <div class="arrow">    
                       <i class="fa-solid fa-arrow-right"></i>
                   </div>
@@ -109,9 +109,9 @@
       
 
       <div class="back-next-box">
-        <div @click="p2to1" class="back-btn">返回</div>
+        <div @click="previous_page" class="back-btn">返回</div>
           <div class="next-step-box">
-            <button class="next-step" @click="p2to3">
+            <button class="next-step" @click="next_page">
               <div class="arrow">    
                   <i class="fa-solid fa-arrow-right"></i>
               </div>
@@ -175,9 +175,9 @@
       </div>
       <div class="blank-box"></div>   
       <div class="back-next-box">
-        <div @click="p3to2" class="back-btn">返回</div>
+        <div @click="previous_page" class="back-btn">返回</div>
         <div class="next-step-box">
-          <button class="next-step" @click="p3to4">
+          <button class="next-step" @click="next_page">
             <div class="arrow">    
               <i class="fa-solid fa-arrow-right"></i>
             </div>
@@ -229,28 +229,43 @@ export default {
       step4_color:"color-white",
     }
   },
-  methods: {
-    p1to2(event){
-      //console.log(event)
-      this.page = 2;
-      this.step2_color = "color-black";
-    },
-    p2to1(event){
-      this.page = 1;
-      this.step2_color = "color-white";
-    },
-    p2to3(event){
-      this.page = 3;
-      this.step3_color = "color-black";
-    },
-    p3to2(event){
-      this.page = 2;
-      this.step3_color = "color-white";
-    },
-    p3to4(event){
-      this.page = 4;
-      this.step4_color = "color-black";
+  watch:{
+    page(now,before){
+      switch(now){
+        case 1:
+          this.step1_color="color-black";
+          this.step2_color="color-white";
+          this.step3_color="color-white";
+          this.step4_color="color-white";
+          break
+        case 2:
+          this.step1_color="color-black";
+          this.step2_color="color-black";
+          this.step3_color="color-white";
+          this.step4_color="color-white";
+          break
+        case 3:
+          this.step1_color="color-black";
+          this.step2_color="color-black";
+          this.step3_color="color-black";
+          this.step4_color="color-white";
+          break
+        case 4:
+          this.step1_color="color-black";
+          this.step2_color="color-black";
+          this.step3_color="color-black";
+          this.step4_color="color-black";
+          break
+      }
     }
+  },
+  methods: {
+    next_page(event){
+      this.page+=1;
+    },
+    previous_page(event){
+      this.page-=1;
+    },
   }
 }
 </script>
