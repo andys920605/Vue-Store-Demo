@@ -4,23 +4,28 @@
 </script>
 
 <template>
-    <div class="search-short-box">
-        <div class="search-short">
+
+    <!--狀態1.短搜尋欄位加上登入按鈕
+        狀態2.移除登入按鈕僅有搜尋欄（CSS註解處） -->
+
+    <div class="search-box">
+        <div class="search-item">
             <div class="search-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <span>搜尋你想找的商品</span>
         </div>
-        <button class="search-short-bt">登入</button>
+        <button class="search-btn">登入</button>
     </div>
+    
 </template>
 
 <style>
-    .search-short-box{
+    .search-box{
         margin: 45px 0 30px;
         display: flex;
     }
-    .search-short{
+    .search-item{
         margin: 0 20px;
         height: 45px;
         width: 70%;
@@ -41,9 +46,17 @@
     .search-icon{
         padding-left: 15px;
     }
-    .search-short-bt{
+    .search-btn{
         font-size: 22px;
         background: none;
         border: none;
     }
+
+    /* 搜尋欄登入後變化
+    .search-btn{
+        display: none;
+    }
+    .search-item{
+        width: 100%;
+    } */
 </style>

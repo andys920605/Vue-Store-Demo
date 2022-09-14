@@ -1,11 +1,14 @@
 
 
 <template>
+    <!-- 主頁活動 -->
+
     <div class="activity-box">
         <div class="activity-item">活動</div>
         <div class="activity-item">活動</div>
         <div class="activity-item">活動</div>
     </div>
+    
 </template>
 
 <style>

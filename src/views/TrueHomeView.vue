@@ -1,14 +1,14 @@
 <script setup>
-import SearchShort from '@/components/SearchShort.vue'
+import Search from '@/components/Search.vue'
 import ItemBtn from '@/components/ItemBtn.vue'
 import Activity from '@/components/Activity.vue'
-import SimpleProduct from '@/components/SimpleProduct.vue'
+import Product from '@/components/Product.vue'
 
 
 </script>
 
 <template>
-    <SearchShort />
+    <Search />
 
     <div class="banner">banner</div>
 
@@ -18,7 +18,7 @@ import SimpleProduct from '@/components/SimpleProduct.vue'
     <div class="banner">熱賣商品</div>
     
     <h2>推薦商品</h2>
-    <SimpleProduct />
+    <Product />
 
 </template>
 
