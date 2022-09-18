@@ -346,4 +346,7 @@
     .store-name,.view-store,.product-review-box,.promotion{
         display: none;
     }
+    .product-item .img-box{
+    height: 170px;
+    }
 </style>

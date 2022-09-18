@@ -3,22 +3,47 @@ import Search from '@/components/Search.vue'
 import ItemBtn from '@/components/ItemBtn.vue'
 import Activity from '@/components/Activity.vue'
 import Product from '@/components/Product.vue'
+import Navbar from '@/components/Navbar.vue'
 
 
 </script>
 
 <template>
-    <Search />
 
-    <div class="banner">banner</div>
+  <!-- 登入後才有導覽列 -->
+  <Navbar />
 
-    <ItemBtn />
-    <Activity />
+  <!-- 搜尋欄位 -->
+  <Search />
 
-    <div class="banner">熱賣商品</div>
-    
-    <h2>推薦商品</h2>
-    <Product />
+  <!-- banner -->
+  <div class="banner">banner</div>
+
+  <!-- 主頁常用連結 -->
+  <ItemBtn />
+
+  <!-- 活動 -->
+  <Activity />
+  
+  <div class="banner">熱賣商品</div>
+
+  <h2>推薦商品</h2>
+
+  <!-- 產品 -->
+  <Product />
+
+  <RouterLink to="/">Home</RouterLink>
+  <hr>
+  <RouterLink to="/the-welcome">Login</RouterLink>
+  <hr>
+  <RouterLink to="/about">About</RouterLink>
+  <hr>
+  <RouterLink to="/true-home">True home</RouterLink>
+  <hr>
+
+    <div class="bangs"></div>
+
+
 
 </template>
 

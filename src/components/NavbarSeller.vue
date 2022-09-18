@@ -5,13 +5,13 @@
 
 <template>
 
-    <!-- 導覽列 -->
+    <!-- 賣家專用導覽列 -->
     <nav>
         <div class="navbar">
 
-            <div class="navbar-item navbar-home">
-                <div class="icon"><i class="fa-solid fa-house"></i></div>
-                <div class="text">主頁</div>
+            <div class="navbar-item navbar-store">
+                <div class="icon"><i class="fa-solid fa-shop"></i></div>
+                <div class="text">商店</div>
             </div>
 
             <div class="navbar-item navbar-inform">
@@ -22,11 +22,6 @@
             <div class="navbar-item navbar-message">
                 <div class="icon"><i class="fa-solid fa-comment-dots"></i></div>
                 <div class="text">訊息</div>
-            </div>
-
-            <div class="navbar-item navbar-car">
-                <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                <div class="text">購物車</div>
             </div>
 
             <div class="navbar-item navbar-my">

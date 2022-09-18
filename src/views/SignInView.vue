@@ -1,5 +1,4 @@
 <template>
-    <div class="bangs"></div>
     <div class="sign-in">
         <h1>登入</h1>
     </div>

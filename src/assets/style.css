@@ -18,6 +18,7 @@ body{
     font-family: 'Noto Sans TC', sans-serif;
     background: #f2f2f2;}
 nav{
+    z-index: 1000;
     position:fixed;
     bottom: 13px;
     width: 100%;
@@ -48,7 +49,7 @@ nav{
 }
 .bangs{
     width: 100%;
-    height: 15px;
+    height: 50px;
 }
 .header{
     display: flex;
@@ -155,7 +156,7 @@ ul{
     font-size: 32px;
     font-weight: 500;
     letter-spacing: 5px;
-    margin: 10px auto 30px;
+    margin: 40px auto 30px;
 }
 .sing-up-process{
     display: flex;
@@ -168,18 +169,14 @@ ul{
     margin: 0 8px;
     position: relative;
 }
-.sing-up-process-step::after{
-    content: '';
+.sing-up-process-step .line{
+    position: absolute;
+    background-color: var(--gray-color);
     width: 54px;
     height: 7px;
-    position: absolute;
     top: 14px;
-    left: 40px;
-    background-color: var(--gray-color);
+    right: 40px;
     z-index: -1;
-}
-.sing-up-process-step4::after{
-    display: none;
 }
 .sing-up-process-step .number{
     background-color: var(--gray-color);
@@ -196,12 +193,6 @@ ul{
 .sing-up-process-step .text{
     font-size: 14px;
     color: var(--deepgray-color);
-}
-.sing-up-process-choose-step1 .number{
-    background: #000;
-}
-.sing-up-process-choose-step1 .text{
-    color: #000;
 }
 .sign-up-h2 h2{
     font-size: 18px;
@@ -270,29 +261,6 @@ ul{
 .choose-user .text p{
     font-size: 16px;
     text-align:justify;
-}
-.sing-up-process-phone-step1 .number,
-.sing-up-process-phone-step2 .number,
-.sing-up-process-basic-step1 .number,
-.sing-up-process-basic-step2 .number,
-.sing-up-process-basic-step3 .number,
-.sing-up-process-basic-step1::after,
-.sing-up-process-basic-step2::after,
-.sing-up-process-done-step3::after,
-.sing-up-process-done-step3 .number,
-.sing-up-process-done-step4 .number{
-    background: #000;
-}
-.sing-up-process-phone-step1 .text,
-.sing-up-process-phone-step2 .text,
-.sing-up-process-basic-step1 .text,
-.sing-up-process-basic-step2 .text,
-.sing-up-process-basic-step3 .text,
-.sing-up-process-done-step4 .text{
-    color: #000;
-}
-.sing-up-process-phone-step1::after{
-    background: #000;
 }
 .form{
     box-sizing: border-box;
