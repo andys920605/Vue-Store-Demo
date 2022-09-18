@@ -1,6 +1,6 @@
 <template>
- <div class="bangs"></div>
- <div id="sign-up-view">
+  <div class="bangs"></div>
+  <div id="sign-up-view">
     <div class="sign-up">
         <h1>註冊帳號</h1>
     </div>
@@ -13,14 +13,17 @@
         <div class="sing-up-process-step" v-bind:class="step2_color">
             <div class="number">2</div>
             <div class="text">手機驗證</div>
+            <div class="line"></div>
         </div>
         <div class="sing-up-process-step" v-bind:class="step3_color">
             <div class="number">3</div>
             <div class="text">基本訊息</div>
+            <div class="line"></div>
         </div>
         <div class="sing-up-process-step sing-up-process-step4" v-bind:class="step4_color">
             <div class="number">4</div>
             <div class="text">完成</div>
+            <div class="line"></div>
         </div>
     </div>
     <!-- #region choose -->
@@ -283,6 +286,9 @@ export default {
 }
 .color-white .text{
   color: #CDCDCD;
+}
+.color-black .line{
+  background: #000;
 }
 
 </style>
