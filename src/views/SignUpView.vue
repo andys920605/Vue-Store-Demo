@@ -5,95 +5,37 @@
         <h1>註冊帳號</h1>
     </div>
 
+    <!-- 進度條 -->
     <div class="sing-up-process">
+        <!-- 郵件驗證 -->
         <div class="sing-up-process-step" v-bind:class="step1_color">
             <div class="number" v-bind:value="page">1</div>
-            <div class="text">選擇</div>
+            <div class="text">郵件驗證</div>
         </div>
+        
+        <!-- 基本訊息 -->
         <div class="sing-up-process-step" v-bind:class="step2_color">
             <div class="number">2</div>
-            <div class="text">手機驗證</div>
-            <div class="line"></div>
-        </div>
-        <div class="sing-up-process-step" v-bind:class="step3_color">
-            <div class="number">3</div>
             <div class="text">基本訊息</div>
             <div class="line"></div>
         </div>
-        <div class="sing-up-process-step sing-up-process-step4" v-bind:class="step4_color">
-            <div class="number">4</div>
+
+        <!-- 完成 -->
+        <div class="sing-up-process-step" v-bind:class="step3_color">
+            <div class="number">3</div>
             <div class="text">完成</div>
             <div class="line"></div>
         </div>
     </div>
-    <!-- #region choose -->
-    <div id="choose" v-if="page === 1">
-      <div class="sign-up-h2"><h2>在這平台中你的角色（可複選）</h2></div>
-      <div class="choose-user-box">
-          <!-- 賣家 -->
-          <label class="choose-user-label">
-              <input type="checkbox" class="checkbox" name="" id="">
-              <div class="choose-user seller">
-                  <div class="user-photo">
-                      <img src="@/assets/photo/seller.png" alt="">
-                  </div>
-                  <div class="text">
-                      <h3>賣家</h3>
-                      <p>販售商品、與自媒體合作打造共享經濟，廣告收益可視化。</p>
-                  </div>
-              </div>
-          </label>
-          <!-- 自媒體 -->
-          <label class="choose-user-label">
-              <input type="checkbox" class="checkbox" name="" id="">
-              <div class="choose-user kol">
-                  <div class="user-photo">
-                      <img src="@/assets/photo/kol.png" alt="">
-                  </div>
-                  <div class="text">
-                      <h3>自媒體</h3>
-                      <p>與賣家合作，可自由販售的商品，到個人平台推廣，越多人購買分潤越多。</p>
-                  </div>
-              </div>
-          </label>
-          <!-- 買家 -->
-          <label class="choose-user-label">
-              <input type="checkbox" class="checkbox" name="" id="">
-              <div class="choose-user buyer">
-                  <div class="user-photo">
-                      <img src="@/assets/photo/buyer.png" alt="">
-                  </div>
-                  <div class="text">
-                      <h3>買家</h3>
-                      <p>用最實惠的價格購買商品。</p>
-                  </div>
-              </div>
-          </label>
-      </div>
 
-      <div class="back-next-box">
-          <RouterLink to="/the-welcome" class="back-btn">返回</RouterLink>
-          <div class="next-step-box">
-              <button class="next-step" @click="next_page">
-                  <div class="arrow">    
-                      <i class="fa-solid fa-arrow-right"></i>
-                  </div>
-              </button>
-          </div>
+    <!-- #region mail -->
+    <div id="mail" v-if="page === 1">
+      <div class="sign-up-h2"><h2>驗證郵件</h2></div>
 
-      </div>
-    </div>
-
-    <!-- #endregion -->
-
-    <!-- #region phone -->
-    <div id="phone" v-else-if="page === 2">
-      <div class="sign-up-h2"><h2>驗證手機號碼</h2></div>
-
-      <!-- 手機號碼輸入框 -->
+      <!-- 郵件驗證 -->
       <div class="form phone-number-icon">
           <input type="number" id="phone-number" class="form-input" autocomplete="off" placeholder=" ">
-          <label for="phone-number" class="form-label">手機號碼</label>
+          <label for="phone-number" class="form-label">電子郵件</label>
       </div>
 
       <div class="btn-box">
@@ -107,12 +49,11 @@
           <input type="number" id="captcha" class="form-input form-input-captcha" autocomplete="off" placeholder=" ">
           <label for="captcha" class="form-label">驗證碼</label>
       </div>
-
+      
       <div class="blank-box"></div>   
       
-
       <div class="back-next-box">
-        <div @click="previous_page" class="back-btn">返回</div>
+        <RouterLink to="/the-welcome" class="back-btn">返回</RouterLink>
           <div class="next-step-box">
             <button class="next-step" @click="next_page">
               <div class="arrow">    
@@ -122,10 +63,11 @@
         </div>
       </div>
     </div>
+
     <!-- #endregion -->
 
     <!-- #region basic -->
-    <div id="basic" v-else-if="page === 3">
+    <div id="basic" v-else-if="page === 2">
       <div class="sign-up-h2"><h2>輸入基本訊息</h2></div>
 
       <!-- 用戶名稱輸入框 -->
@@ -152,12 +94,6 @@
           <label for="password-again" class="form-label">確認密碼</label>
       </div>
 
-      <!-- 電子郵件輸入框 -->
-      <div class="form mail-icon">
-          <input type="text" id="mail" class="form-input form-input-captcha" autocomplete="off" placeholder=" ">
-          <label for="mail" class="form-label">電子郵件</label>
-      </div>
-      
       <!-- 勾選 -->
       <div class="agree-check-box">
         <div class="agree-check">
@@ -191,7 +127,7 @@
     <!-- #endregion -->
 
     <!-- #region done -->
-    <div id="done" v-else-if="page === 4">
+    <div id="done" v-else-if="page === 3">
       <div class="like-icon">
         <div class="like-bg">
             <div class="hand">

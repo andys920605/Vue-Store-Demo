@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/TrueHomeView.vue')
+      component: () => import('../views/HomeView.vue')
     },
     {
       path: '/about',
@@ -33,6 +33,21 @@ const router = createRouter({
       path: '/sign-in',
       name: 'sign-in',
       component: () => import('../views/SignInView.vue')
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: () => import('../views/SearchView.vue')
+    },
+    {
+      path: '/old-home',
+      name: 'old-home',
+      component: () => import('../views/OldHomeView.vue')
+    },
+    {
+      path: '/my',
+      name: 'my',
+      component: () => import('../views/MyView.vue')
     },
   ]
 })

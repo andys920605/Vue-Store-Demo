@@ -14,7 +14,7 @@
 <style>
     .activity-box{
         display: flex;
-        margin: 30px 5px;
+        margin: 20px 5px 30px;
         justify-content: space-evenly;
     }
     .activity-item{

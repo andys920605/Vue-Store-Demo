@@ -238,11 +238,11 @@
         justify-content: space-between;
         align-content: stretch;
         margin-bottom: 50px;
-        margin-top: 5px;
+        /* margin-top: 5px; */
     }
     .product-item{
         text-decoration: none;
-        margin: 18px auto 0;
+        margin: 0px auto 0;
     }
     a{
         color: black;

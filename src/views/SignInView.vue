@@ -16,7 +16,9 @@
     </div>
 
     <div class="btn-box">
-        <button type="submit" class="send-number-btn">登入帳號</button>
+        <RouterLink to="/"> 
+            <button type="submit" class="send-number-btn">登入帳號</button>
+        </RouterLink>
     </div>
 
     <div class="choose-sign">

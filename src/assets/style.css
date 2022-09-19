@@ -301,7 +301,7 @@ ul{
     color: var(--middle-gray-color);
 }
 .phone-number-icon::after{
-    content: '\f3cd';
+    content: '\f0e0';
     left: 24px;
 }
 .captcha-icon::after{

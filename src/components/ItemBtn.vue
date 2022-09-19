@@ -6,7 +6,29 @@
     <!-- 主頁常用連結 -->
 
     <div class="item-btn-box">
+        <RouterLink to="/Search">
         <div class="item-btn">
+            <div class="item-icon">
+                <i class="fa-solid fa-shirt"></i>
+            </div>
+        </div>
+        </RouterLink>
+        <div class="item-btn">
+            <div class="item-icon">
+                <i class="fa-solid fa-shirt"></i>
+            </div>
+        </div>
+        <div class="item-btn">
+            <div class="item-icon">
+                <i class="fa-solid fa-shirt"></i>
+            </div>
+        </div>
+        <div class="item-btn">
+            <div class="item-icon">
+                <i class="fa-solid fa-shirt"></i>
+            </div>
+        </div>
+        <!-- <div class="item-btn">
             <div class="item-icon">
                 <i class="fa-solid fa-shirt"></i>
             </div>
@@ -25,27 +47,7 @@
             <div class="item-icon">
                 <i class="fa-solid fa-shirt"></i>
             </div>
-        </div>
-        <div class="item-btn">
-            <div class="item-icon">
-                <i class="fa-solid fa-shirt"></i>
-            </div>
-        </div>
-        <div class="item-btn">
-            <div class="item-icon">
-                <i class="fa-solid fa-shirt"></i>
-            </div>
-        </div>
-        <div class="item-btn">
-            <div class="item-icon">
-                <i class="fa-solid fa-shirt"></i>
-            </div>
-        </div>
-        <div class="item-btn">
-            <div class="item-icon">
-                <i class="fa-solid fa-shirt"></i>
-            </div>
-        </div>
+        </div> -->
     </div>
 
 </template>
@@ -62,10 +64,10 @@
         margin: 0 auto 20px;
     }
     .item-btn{
-        margin: 30px 8px 20px;
-        width: 65px;
-        height: 65px;
-        background: gray;
+        margin: 10px 8px 20px;
+        width: 60px;
+        height: 60px;
+        background: rgb(124, 124, 124);
         border-radius: 200px;
         text-align: center;
     }

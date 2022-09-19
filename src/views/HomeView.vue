@@ -1,76 +1,82 @@
 <script setup>
-import HelloWorld from '@/components/HelloWorld.vue'
-import HeaderComp from '@/components/HeaderComp.vue'
-import test1 from '@/components/test1.vue'
-import test2 from '@/components/test2.vue'
-
+import Search from '@/components/Search.vue'
+import ItemBtn from '@/components/ItemBtn.vue'
+import Activity from '@/components/Activity.vue'
+import Product from '@/components/Product.vue'
+import Navbar from '@/components/Navbar.vue'
+import Btn from '@/components/Btn.vue'
 
 </script>
 
 <template>
-    <HeaderComp />
-    <main>
-        <button
-        v-for="tab in tabs"
-        :key="tab"
-        :class="['tab-button', { active: currentTab === tab }]"
-        @click="currentTab = tab">
-        {{ tab }}
-        </button>
 
-    <component :is="currentTabComponent"></component>
+  <!-- 登入後才有導覽列 -->
+  <Navbar />
 
-    <nav>
-        <div class="navbar">
-            <div class="navbar-item navbar-store">
-                <div class="icon"><i class="fa-solid fa-shop"></i></div>
-                <div class="text">商店</div>
-            </div>
-            <div class="navbar-item navbar-message">
-                <div class="icon"><i class="fa-solid fa-comment-dots"></i></div>
-                <div class="text">訊息</div>
-            </div>
-            <div class="navbar-item navbar-inform">
-                <div class="icon"><i class="fa-solid fa-bell"></i></div>
-                <div class="text">通知</div>
-            </div>
-            <div class="navbar-item navbar-my">
-                <div class="icon"><i class="fa-solid fa-user"></i></div>
-                <div class="text">我的</div>
-            </div>
-        </div>
-    </nav>
+  <!-- 搜尋欄位 -->
+  <Search />
+
+  <!-- banner -->
+  <div class="banner">banner</div>
+
+  <!-- 主頁常用連結 -->
+  <div class="btn-outer">
+    <Btn />
+    <Btn />
+    <Btn />
+    <Btn />
+    <Btn />
+    <Btn />
+    <Btn />
+    <Btn />
+    <Btn />
+    <Btn />
+  </div>
+  <!-- 活動 -->
+  <Activity />
+  
+  <div class="banner">熱賣商品</div>
+
+  <h2>推薦商品</h2>
+
+  <!-- 產品 -->
+  <Product />
 
     <div class="bangs"></div>
-    </main>
+
+
+
 </template>
 
-<script>
-export default {
-    data () {
-        return {
-        currentTab: 'HelloWorld',
-        tabs: ['HelloWorld', 'test1', 'test2'],
-        message:'',
-        }
-    },
-    computed: {
-        currentTabComponent() {
-        //console.log(this.currentTab.toLowerCase());
-        return this.currentTab.toLowerCase();
-        },
-    },
-    components:{
-        'helloworld':HelloWorld,
-        'test1':test1,
-        'test2':test2,
-    }
-}
-</script>
-
-
-
-
 <style>
-
+  .banner{
+    margin: 20px auto 0;
+    width: 90%;
+    height: 160px;
+    line-height: 160px;
+    border-radius: 20px;
+    background: gray;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+  }
+  h2{
+    font-weight: 500;
+    font-size: 22px;
+    padding-left: 25px;
+    margin: 30px 0 10px;
+  }
+  .btn-outer{
+    /* background: red; */
+    margin: 30px auto 0;
+    width: 90%;
+    height: 180px;
+    text-align:center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .btn{
+    margin: 0px 5px;
+  }
 </style>
