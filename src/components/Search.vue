@@ -1,6 +1,4 @@
 <script setup>
-    
-
 </script>
 
 <template>
@@ -15,10 +13,47 @@
             </div>
             <span>搜尋你想找的商品</span>
         </div>
-        <button class="search-btn">登入</button>
+        <button class="search-btn" v-show="showLoginBtn">登入</button>
     </div>
     
 </template>
+
+<script>
+     var accessToken ={
+        "account": "admin",
+        "role": "1",
+        "aud": "admin",
+        "exp": 1660188986,
+        "jti": "admin1660187186",
+        "iat": 1660187186,
+        "iss": "ginJWT",
+        "nbf": 1660187187
+    } 
+    localStorage.setItem('accessToken', JSON.stringify(accessToken));
+    function getToken(){
+        return JSON.parse(localStorage.getItem('accessToken'))|| 0;
+    }
+    var token=getToken();
+    console.log(token);
+    if (token!=null){
+        vMountedInstance.$data.showLoginBtn = false;
+    }else{
+        //search.style.width = 70;
+        vMountedInstance.$data.showLoginBtn = true;
+    }
+    export default {
+        data () {  
+            return {
+                width:'100%',
+                showLoginBtn:true,
+            }
+        },
+    }
+    
+</script>
+
+
+
 
 <style>
     .search-box{
@@ -29,6 +64,15 @@
         margin: 0 20px;
         height: 45px;
         width: 70%;
+        background: white;
+        border-radius: 30px;
+        display: flex;
+        color: gray;
+    }
+    .search-item-login{
+        margin: 0 20px;
+        height: 45px;
+        width: 100%;
         background: white;
         border-radius: 30px;
         display: flex;
