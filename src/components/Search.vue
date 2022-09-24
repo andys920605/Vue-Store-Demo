@@ -35,7 +35,6 @@
     export default {
         data () {  
             return {
-                width:'100%',
                 showLoginBtn:true,
                 searchItem:'search-item',
             }
@@ -51,8 +50,8 @@
                 // 判斷token狀態，渲染畫面
                 if (Object.keys(token).length === 0){
                     // 尚未登入狀態
-                    this.searchItem = 'search-item';
                     this.showLoginBtn = true;
+                    this.searchItem = 'search-item';
                 }else{
                     // 登入狀態
                     this.showLoginBtn = false;
