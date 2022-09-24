@@ -7,7 +7,7 @@
         狀態2.移除登入按鈕僅有搜尋欄（CSS註解處） -->
 
     <div class="search-box">
-        <div class="search-item">
+        <div v-bind:class="searchItem">
             <div class="search-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
@@ -19,7 +19,8 @@
 </template>
 
 <script>
-     var accessToken ={
+    // 模擬登入後拿到的token 
+    var accessToken ={
         "account": "admin",
         "role": "1",
         "aud": "admin",
@@ -28,26 +29,38 @@
         "iat": 1660187186,
         "iss": "ginJWT",
         "nbf": 1660187187
-    } 
+    }
+    // 將token存入localStorage
     localStorage.setItem('accessToken', JSON.stringify(accessToken));
-    function getToken(){
-        return JSON.parse(localStorage.getItem('accessToken'))|| 0;
-    }
-    var token=getToken();
-    console.log(token);
-    if (token!=null){
-        vMountedInstance.$data.showLoginBtn = false;
-    }else{
-        //search.style.width = 70;
-        vMountedInstance.$data.showLoginBtn = true;
-    }
     export default {
         data () {  
             return {
                 width:'100%',
                 showLoginBtn:true,
+                searchItem:'search-item',
             }
         },
+        created () {
+            this.getToken()
+        },
+        methods: {
+            getToken(){
+                // 取出token 
+                var token = JSON.parse(localStorage.getItem('accessToken'));
+                //console.log(token); 
+                // 判斷token狀態，渲染畫面
+                if (Object.keys(token).length === 0){
+                    // 尚未登入狀態
+                    this.searchItem = 'search-item';
+                    this.showLoginBtn = true;
+                }else{
+                    // 登入狀態
+                    this.showLoginBtn = false;
+                    this.searchItem = 'search-item-login';
+                }
+            }
+
+        }
     }
     
 </script>
