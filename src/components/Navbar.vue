@@ -16,21 +16,21 @@
                 </div>
             </RouterLink>
 
-            <RouterLink to="/">
+            <RouterLink to="/inform">
                 <div class="navbar-item navbar-inform">
                     <div class="icon"><i class="fa-solid fa-bell"></i></div>
                     <div class="text">通知</div>
                 </div>
             </RouterLink>
 
-            <RouterLink to="/">
+            <RouterLink to="/message">
                 <div class="navbar-item navbar-message">
                     <div class="icon"><i class="fa-solid fa-comment-dots"></i></div>
                     <div class="text">訊息</div>
                 </div>
             </RouterLink>
 
-            <RouterLink to="/">
+            <RouterLink to="/cart">
                 <div class="navbar-item navbar-car">
                     <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
                     <div class="text">購物車</div>

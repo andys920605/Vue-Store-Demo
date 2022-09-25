@@ -10,14 +10,15 @@
         狀態3.搜尋後返回
         狀態4.返回以及篩選-->
 
-    <div class="search-box">
-        <i class="fa-solid fa-chevron-left"></i>
-        <div class="search-item">
+        <div class="search-box">
+            <i class="fa-solid fa-chevron-left"></i>
+            <div class="search-item">
                 <div class="search-icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <span>搜尋你想找的商品</span>
             </div>
+    
         <RouterLink to="/the-welcome">
             <button class="search-btn">登入</button>
         </RouterLink>
@@ -31,7 +32,7 @@
 
 <style>
     .search-box{
-        margin: 45px 0 10px;
+        margin: 0px 0 10px;
         display: flex;
         align-items: center;
     }
@@ -91,8 +92,8 @@
     .search-item{
         margin-left: 10px;
     } */
-
-    /* 狀態3.返回以及篩選*/
+    
+    /* 狀態4.返回以及篩選*/
     /* .filter{
         display: flex;
         background: white;

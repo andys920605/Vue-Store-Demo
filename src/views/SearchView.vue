@@ -1,10 +1,13 @@
 <script setup>
 import Search from '@/components/Search.vue'
 import Product from '../components/Product.vue'
+import Navbar from '@/components/Navbar.vue'
 
 </script>
 <template>
 
+<Navbar />
+<div class="bangs"></div>
 <Search />
 
 <div class="sort-bar">
@@ -46,5 +49,46 @@ import Product from '../components/Product.vue'
     position: absolute;
     font-size: 18px;
     bottom: 18px;
+    }
+    .filter{
+    display: block;
+    }
+    .search-btn{
+    display: none;
+    }
+    .filter{
+    display: flex;
+    background: white;
+    padding: 0px 12px;
+    align-items: center;
+    border-radius: 40px;
+    color: rgb(62, 62, 62);
+    }
+    .filter span{
+        font-size: 14px;
+    }
+    .filter .fa-filter{
+        font-size: 18px;
+    }
+    .search-item{
+    width: 60%;
+    margin-right: 10px;
+    }
+    .search-box .fa-chevron-left{
+    display: block;
+    }
+    .search-box .fa-chevron-left{
+    padding-left: 15px; 
+    font-size: 30px;
+    color: rgb(62, 62, 62);
+    }
+    .search-item{
+    margin-left: 10px;
+    } 
+    .store-name,.view-store,.product-review-box,.promotion{
+        /* display:initial; */
+    }
+    .product-item .img-box{
+    height: 170px;
     }
 </style>

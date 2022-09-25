@@ -4,12 +4,14 @@
 
 <template>
 
+    <RouterLink to="/Search">
     <div class="btn">
         <div class="icon">
             <i class="fa-solid fa-shirt"></i>
         </div>
         <p>衣服</p>
     </div>
+    </RouterLink>
 </template>
 
 <style>

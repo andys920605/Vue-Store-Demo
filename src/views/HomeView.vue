@@ -13,6 +13,7 @@ import Btn from '@/components/Btn.vue'
   <!-- 登入後才有導覽列 -->
   <Navbar />
 
+    <div class="bangs"></div>
   <!-- 搜尋欄位 -->
   <Search />
 

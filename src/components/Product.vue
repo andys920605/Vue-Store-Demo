@@ -238,7 +238,6 @@
         justify-content: space-between;
         align-content: stretch;
         margin-bottom: 50px;
-        /* margin-top: 5px; */
     }
     .product-item{
         text-decoration: none;
