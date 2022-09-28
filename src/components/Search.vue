@@ -10,6 +10,7 @@
         狀態3.搜尋後返回
         狀態4.返回以及篩選-->
 
+<<<<<<< HEAD
         <div class="search-box">
             <i class="fa-solid fa-chevron-left"></i>
             <div class="search-item">
@@ -17,6 +18,12 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <span>搜尋你想找的商品</span>
+=======
+    <div class="search-box">
+        <div v-bind:class="searchItem">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+>>>>>>> c81941026b6f98bd69b262ce2a1556b8ae39bf75
             </div>
     
         <RouterLink to="/the-welcome">
@@ -30,6 +37,58 @@
     
 </template>
 
+<<<<<<< HEAD
+=======
+<script>
+    // 模擬登入後拿到的token 
+    var accessToken ={
+        "account": "admin",
+        "role": "1",
+        "aud": "admin",
+        "exp": 1660188986,
+        "jti": "admin1660187186",
+        "iat": 1660187186,
+        "iss": "ginJWT",
+        "nbf": 1660187187
+    }
+    // 將token存入localStorage
+    localStorage.setItem('accessToken', JSON.stringify(accessToken));
+    export default {
+        data () {  
+            return {
+                showLoginBtn:true,
+                searchItem:'search-item',
+            }
+        },
+        created () {
+            this.getToken()
+        },
+        methods: {
+            getToken(){
+                // 取出token 
+                var token = JSON.parse(localStorage.getItem('accessToken'));
+                //console.log(token); 
+                // 判斷token狀態，渲染畫面
+                if (Object.keys(token).length === 0){
+                    // 尚未登入狀態
+                    this.showLoginBtn = true;
+                    this.searchItem = 'search-item';
+                }else{
+                    // 登入狀態
+                    this.showLoginBtn = false;
+                    this.searchItem = 'search-item-login';
+                }
+            }
+
+        }
+    }
+    
+</script>
+
+
+
+
+>>>>>>> c81941026b6f98bd69b262ce2a1556b8ae39bf75
 <style>
     .search-box{
         margin: 0px 0 10px;
