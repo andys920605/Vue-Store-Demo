@@ -42,7 +42,6 @@
         data () {  
             return {
                 showLoginBtn:true,
-                searchItem:'search-item',
             }
         },
         created () {
@@ -52,19 +51,16 @@
             getToken(){
                 // 取出token 
                 var token = JSON.parse(localStorage.getItem('accessToken'));
-                //console.log(token); 
-                // 判斷token狀態，渲染畫面
-                if (Object.keys(token).length === 0){
-                    // 尚未登入狀態
-                    this.showLoginBtn = true;
-                    this.searchItem = 'search-item';
-                }else{
-                    // 登入狀態
-                    this.showLoginBtn = false;
-                    this.searchItem = 'search-item-login';
-                }
+                // 判斷token狀態，如果尚未登入，登入鍵就顯示
+                this.showLoginBtn =(Object.keys(token).length === 0)?true:false;
+                // this.showLoginBtn = true;  //這行打開可以將登入狀態改為尚未登入
             }
-
+        }
+        ,computed:{
+            searchItem(){
+                // 登入鍵是否顯示，控制使用哪一個class
+                return this.showLoginBtn?'search-item':'search-item-login';
+            }
         }
     }
     
