@@ -70,7 +70,9 @@ import Navbar from '@/components/Navbar.vue'
         </div>
     
         <h4>總計 <span>$</span>2500</h4>
-        <button>買單去</button>
+        <RouterLink to="/confirm-order">
+            <button>買單去</button>
+        </RouterLink>
     </div>
 
 </template>

@@ -73,7 +73,7 @@
 
 <style>
     .search-box{
-        margin: 45px 0 30px;
+        margin: 0px 0 30px;
         display: flex;
     }
     .search-item{
