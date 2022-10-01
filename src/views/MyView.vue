@@ -1,6 +1,4 @@
 <script setup>
-import Btn from '@/components/Btn.vue'
-import Navbar from '@/components/Navbar.vue'
 </script>
 
 <template>
@@ -40,6 +38,7 @@ import Navbar from '@/components/Navbar.vue'
     </div>
     
     <!-- 我的訂單 -->
+    <RouterLink to="my-order">
     <div class="my-order">
         <div class="title">
             <h3>我的訂單</h3>
@@ -53,6 +52,7 @@ import Navbar from '@/components/Navbar.vue'
             <Btn /> 
         </div>
     </div>
+    </RouterLink>
 
     <div class="sitting-box">
 

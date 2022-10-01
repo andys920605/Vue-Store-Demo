@@ -1,16 +1,12 @@
 <script setup>
-import InformItem from '@/components/InformItem.vue'
-import Navbar from '@/components/Navbar.vue'
-
 </script>
 
 <template>
     
     <Navbar />
 
-    <div class="bangs"></div>
         <div class="title-box">
-        <h1>通知</h1>
+        <Title name="通知" />
         <div class="select-area">
             <button id="all-read">全部已讀</button>
             <button id="choose">選取</button>
@@ -32,15 +28,15 @@ import Navbar from '@/components/Navbar.vue'
 </template>
 
 <style>
-    .title-box{
-    margin: 0 30px 20px 40px;
+.title-box{
+    margin: 40px 30px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     }
-    .title-box h1{
-    font-size: 28px;
-    } 
+    h1{
+        margin: 0;
+    }
     .select-area{
     font-weight: 900;
     }
@@ -59,5 +55,4 @@ import Navbar from '@/components/Navbar.vue'
     font-size: 16px;
     margin-left: 10px;
     }
-
 </style>

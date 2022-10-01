@@ -1,11 +1,4 @@
 <script setup>
-import Search from '@/components/Search.vue'
-import ItemBtn from '@/components/ItemBtn.vue'
-import Activity from '@/components/Activity.vue'
-import Product from '@/components/Product.vue'
-import Navbar from '@/components/Navbar.vue'
-import Btn from '@/components/Btn.vue'
-
 </script>
 
 <template>

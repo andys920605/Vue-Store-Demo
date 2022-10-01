@@ -1,8 +1,4 @@
 <script setup>
-import Search from '@/components/Search.vue'
-import Product from '../components/Product.vue'
-import Navbar from '@/components/Navbar.vue'
-
 </script>
 <template>
 

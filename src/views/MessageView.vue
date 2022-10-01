@@ -1,20 +1,12 @@
 <script setup>
-import InformItem from '@/components/InformItem.vue'
-import Navbar from '@/components/Navbar.vue'
-import MessageItem from '@/components/MessageItem.vue'
-import Search from '@/components/Search.vue'
-
-
 </script>
 
 <template>
     
     <Navbar />
 
-    <div class="bangs"></div>
-    
         <div class="title-box">
-            <h1>訊息</h1>
+            <Title name="訊息" /> 
             <div class="user-photo">
                 <img src="https://i.postimg.cc/YCyh23dc/v2-9e38b07334f7cd9e997bf469e37b17b2-b.png" alt="">
             </div>
@@ -43,17 +35,15 @@ import Search from '@/components/Search.vue'
 </template>
 
 <style>
-
-
-    .title-box{
-    margin: 0 30px 20px 40px;
+.title-box{
+    margin: 40px 30px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     }
-    .title-box h1{
-    font-size: 28px;
-    } 
+    h1{
+        margin: 0;
+    }
     .title-box .user-photo{
     width: 30px;
     height: 30px;
@@ -64,8 +54,6 @@ import Search from '@/components/Search.vue'
     border-radius: 200px;
     border: 1px solid gray;
     }
-
-
     .state-box{
     padding-left: 30px;
     margin: 20px 0;
@@ -90,5 +78,4 @@ import Search from '@/components/Search.vue'
     .search-item{
         width: 100%;
     }
-
 </style>

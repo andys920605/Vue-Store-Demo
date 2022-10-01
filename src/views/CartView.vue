@@ -1,18 +1,11 @@
 <script setup>
-import Navbar from '@/components/Navbar.vue'
-
 </script>
 
 <template>
 
     <Navbar />
 
-    <div class="bangs"></div>
-
-    <div class="title-box">
-    <h1>購物車</h1>
-    </div>
-
+    <Title name="購物車" />
 
     <div class="cart-box">
     
@@ -78,15 +71,6 @@ import Navbar from '@/components/Navbar.vue'
 </template>
 
 <style>
-    .title-box{
-    margin: 0 30px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    }
-    .title-box h1{
-    font-size: 28px;
-    } 
     .cart-box{
     background: white;
     margin: 0 10px 20px;
